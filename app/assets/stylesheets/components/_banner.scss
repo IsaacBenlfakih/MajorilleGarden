@@ -4,6 +4,12 @@
   padding: 150px 0;
 
 }
+.banner-image {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(about-us.jpg);
+}
+.banner-image2 {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(banner5.jpg);
+}
 .banner h1 {
   margin: 0;
   color: white;
@@ -65,4 +71,8 @@
   text-align: center;
   margin-top: 10px;
   max-width: 650px;
+}
+
+.banner a {
+  text-align: center;
 }

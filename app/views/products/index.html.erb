@@ -6,16 +6,14 @@
 </div>
 
 <div class="container mt-5 d-flex flex-row flex-wrap justify-content-center align-items-center w-100">
-    <ul class="d-flex flex-row justify-content-start align-items-start w-100 gap-2 p-0 flex-wrap">
+    <ul class="d-flex flex-row justify-content-evenly align-items-start w-100 gap-3 p-0 flex-wrap">
       <% @products.each do | product |  %>
         <li class="card card-sizing">
-          <a class="card" href=""><%= image_tag('P3.jpg') %></a>
+         <%= link_to image_tag('P3.jpg'), product_path(product) %>
           <div class="card-body">
-          <a class="title-href" href="">
-            <h5 class="card-title"><%= product.name%></h5>
-          </a>
+            <h5 class="card-title"><%= link_to product.name, product_path(product), class: "title-href" %></h5>
           <p class= "card-text"><strong>$<%= product.price%></strong></p>
-          <a style="width: 100%; border-color: black;" class="btn btn-outline-primary text-center" href="#">Add to cart</a>
+          <a style="width: 100%; border-color: black;" class="btn btn-outline-primary text-center cart-button" href="#">Add to cart</a>
           </div>
         </li>
       <% end %>
