@@ -5,6 +5,12 @@
 }
 .navbar {
   position: sticky;
+  top: 0;
+  height: 100px;
+  z-index: 1000;
+}
+.navbar>.container-fluid {
+  justify-content: space-evenly;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,18 +18,18 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 100px;
+  width: 75px;
   margin-left: 20px;
   margin-top: 10px;
 }
 #logo{
-  width: 100px;
+  width: 75px;
 }
 .navbar-light .navbar-nav .nav-link{
   color: white;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-size: 20px;
 }

@@ -1,15 +1,21 @@
 .footer {
   background: #FAF7F4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
   height: 300px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  position: relative;
+  bottom: 0;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .footer-copyright a {
   text-decoration: none;
   color: rgb(0, 0, 0);
+  text-align: center;
 }
 .footer-copyright {
   font-family: "Montserrat", sans-serif;
@@ -40,7 +46,7 @@
   color: #D23333;
 }
 .footer .footer-brand img {
-  width: 100px;
+  width: 150px;
 }
 .footer-left {
   display: flex;

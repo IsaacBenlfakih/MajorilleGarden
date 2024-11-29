@@ -1,3 +1,23 @@
-<% @products.each do | product | %>
-<h5><%= product.name %></h5>
-<% end %>
+<div class="banner2" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.pikbest.com/wp/202408/beauty-products-display-on-3d-natural-brown-podium-background-for-cosmetic_9744791.jpg!sw800);">
+  <div class="container">
+    <h1><strong>ALLE PRODUCTEN</strong></h1>
+      <p>Ontdek de magie van de Majorelletuin, waar Marokkaanse tradities en biologische producten voor iedereen toegankelijk zijn!</p>
+  </div>
+</div>
+
+<div class="container mt-5 d-flex flex-row flex-wrap justify-content-center align-items-center w-100">
+    <ul class="d-flex flex-row justify-content-start align-items-start w-100 gap-2 p-0 flex-wrap">
+      <% @products.each do | product |  %>
+        <li class="card card-sizing">
+          <a class="card" href=""><%= image_tag('P3.jpg') %></a>
+          <div class="card-body">
+          <a class="title-href" href="">
+            <h5 class="card-title"><%= product.name%></h5>
+          </a>
+          <p class= "card-text"><strong>$<%= product.price%></strong></p>
+          <a style="width: 100%; border-color: black;" class="btn btn-outline-primary text-center" href="#">Add to cart</a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
