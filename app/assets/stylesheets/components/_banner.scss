@@ -10,6 +10,9 @@
 .banner-image2 {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(banner5.jpg);
 }
+.banner-image3 {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(sandbath.jpg);
+}
 .banner h1 {
   margin: 0;
   color: white;
@@ -74,5 +77,40 @@
 }
 
 .banner a {
+  text-align: center;
+}
+.banner3 {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+}
+
+.banner3 p {
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-top: 10px;
+  max-width: 650px;
+}
+.banner3 h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 32px;
+  font-optical-sizing: auto;
   text-align: center;
 }
