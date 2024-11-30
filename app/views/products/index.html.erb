@@ -5,11 +5,14 @@
   </div>
 </div>
 
+
 <div class="container mt-5 d-flex flex-row flex-wrap justify-content-center align-items-center w-100">
     <ul class="d-flex flex-row justify-content-evenly align-items-start w-100 gap-3 p-0 flex-wrap">
       <% @products.each do | product |  %>
+
         <li class="card card-sizing">
-         <%= link_to image_tag('P3.jpg'), product_path(product) %>
+          <% picture = cl_image_tag product.photo.key %>
+          <%= link_to picture, product_path(product) %>
           <div class="card-body">
             <h5 class="card-title"><%= link_to product.name, product_path(product), class: "title-href" %></h5>
           <p class= "card-text"><strong>$<%= product.price%></strong></p>

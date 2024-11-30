@@ -12,10 +12,10 @@
          <ul class="navbar-nav me-auto ">
             <%# if user_signed_in? %>
               <li class="nav-item active">
-                <%= link_to "Over ons", "about", class: "nav-link" %>
+                <%= link_to "Over ons", about_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "Onze producten", "products", class: "nav-link" %>
+                <%= link_to "Onze producten", products_path, class: "nav-link" %>
               </li>
           <li class="nav-item">
             <%= link_to "Contact", "#", class: "nav-link" %>
