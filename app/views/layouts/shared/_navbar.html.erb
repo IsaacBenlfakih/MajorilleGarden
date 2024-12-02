@@ -8,22 +8,24 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-       <div class="nav-half-links">
-         <ul class="navbar-nav me-auto ">
-            <%# if user_signed_in? %>
-              <li class="nav-item active">
-                <%= link_to "Over ons", about_path, class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Onze producten", products_path, class: "nav-link" %>
-              </li>
-          <li class="nav-item">
-            <%= link_to "Zandbad", zandbad_path, class: "nav-link" %>
-          </li>
-          </ul>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <div class="nav-half-links">
+           <ul class="navbar-nav me-auto">
+              <%# if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to "Over ons", about_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Onze collectie", products_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Zandbad", zandbad_path, class: "nav-link" %>
+            </li>
+            </ul>
+         </div>
        </div>
 
-    <div class="nav-right" id="navbarSupportedContent">
+    <div class="nav-right" >
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
           <li style="padding: 13px;" class="nav-item">

@@ -7,10 +7,10 @@
 
 
 <div class="container mt-5 d-flex flex-row flex-wrap justify-content-center align-items-center w-100">
-    <ul class="d-flex flex-row justify-content-evenly align-items-start w-100 gap-3 p-0 flex-wrap">
+    <ul class="d-flex flex-row justify-content-evenly align-items-start w-100 gap-3 p-0 flex-wrap" >
       <% @products.each do | product |  %>
 
-        <li class="card card-sizing">
+        <li class="card card-sizing index-round" >
           <% picture = cl_image_tag product.photo.key %>
           <%= link_to picture, product_path(product) %>
           <div class="card-body">

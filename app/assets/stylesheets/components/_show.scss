@@ -1,8 +1,9 @@
 .container-show {
   display: flex;
   justify-content:center;
-  gap: 40px;
+  gap: 55px;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 .button-4 {
   display: flex;
@@ -51,4 +52,13 @@
   font-size: 14px;
   margin-bottom: 16px;
   color: gray;
+  max-width: 45% ;
+}
+.show-info {
+  max-width: 34%;
+}
+@media (max-width: 425px) {
+  .container-show {
+    margin-top: 30px;
+  }
 }
