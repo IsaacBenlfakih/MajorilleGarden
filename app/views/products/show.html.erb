@@ -4,7 +4,11 @@
      <h1 class="show-name"><%= @product.name %></h1>
     <p class="show-description"><%= @product.description %></p>
      <p class="show-price"><strong>€<%= @product.price %></strong></p>
-    <a class="btn btn-outline-warning button-4 mt-3 " href="">Add to cart</a>
+    <%= form_with(url: cart_add_path) do |f| %>
+              <%= f.hidden_field :id, value: @product.id  %>
+              <%= f.number_field :quantity, value: 0, min: 1 %>
+              <%= f.submit "Add To Cart", :onclick => "return confirm('Added To Cart!')", class:"btn btn-outline-warning button-4 mt-3" %>
+            <% end %>
     <div style="display: flex;">
       <i style="color: rgba(8, 56, 75, 1);" class="fa-solid fa-circle-check mt-1"></i>
       <p class="ms-2 show-description" style="color: black;">In stock</p>

@@ -10,15 +10,21 @@
     <ul class="d-flex flex-row justify-content-evenly align-items-start w-100 gap-3 p-0 flex-wrap" >
       <% @products.each do | product |  %>
 
-        <li class="card card-sizing index-round" >
-          <% picture = cl_image_tag product.photo.key %>
-          <%= link_to picture, product_path(product) %>
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to product.name, product_path(product), class: "title-href" %></h5>
-          <p class= "card-text"><strong>$<%= product.price%></strong></p>
-          <a style="width: 100%; border-color: black;" class="btn btn-outline-primary text-center cart-button" href="#">Add to cart</a>
-          </div>
-        </li>
-      <% end %>
+          <li class="card card-sizing index-round" >
+        <div id="<%= dom_id product %>">
+            <% picture = cl_image_tag product.photo.key %>
+            <%= link_to picture, product_path(product) %>
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to product.name, product_path(product), class: "title-href" %></h5>
+            <p class= "card-text"><strong>$<%= product.price%></strong></p>
+            <%= form_with(url: cart_add_path, action: cart_path) do |f| %>
+              <%= f.hidden_field :id, value: product.id  %>
+              <%= f.number_field :quantity, value: 0, min: 1, style:"width: 15%; margin-bottom: 5px" %>
+              <%= f.submit "Add To Cart", :onclick => "return confirm('Added To Cart!')", style: "width: 100%; border-color: black;", class: "btn btn-outline-primary text-center cart-button" %>
+            <% end %>
+            </div>
+                <% end %>
+        </div>
+          </li>
     </ul>
   </div>
